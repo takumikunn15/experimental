@@ -1,0 +1,24 @@
+@import "normalize.css";
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+.test {
+  display: table-cell; /* IE8から使用可能 */
+  width: 100vw;
+  height: 100vh;
+  background-color: #22335b;
+  vertical-align: middle;
+  p {
+    color: #fff;
+    text-align: center;
+    font-size: 10vw;
+  }
+}
