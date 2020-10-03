@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+/* 基本設定 */
+
+* {
+	margin: 0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+
+/* ページ全体の設定 */
+body {
+	display: grid;
+	grid-template-columns: 20px 1fr 20px;
+	grid-template-rows: 
+		[head] 100px
+		[title] auto
+		[sub] auto
+		[recent] auto
+		[foot] 100px;
+	grid-row-gap: 20px;
+	row-gap: 20px;
+	font-family: sans-serif;
+}
+
+
+/* パーツの配置*/
+body > * {
+	grid-column: 2 / -2;
+}
+
+
+/* ヘッダー */
+header {
+	grid-row: head;
+	justify-self: center;
+	align-self: center;
+	font-size: 40px;
+	color: #555d6b;
+}
+
+/* ナビゲーションメニュー */
+nav {
+	grid-row: head;
+	justify-self: center;
+	align-self: end;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	display: grid;
+	grid-auto-flow: column;
+	grid-column-gap: 20px;
+	column-gap: 20px;
+}
+
+nav a {
+	color: #666666;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+nav a:hover {
+	color: #ef9504;
+}
+
+
+/* ヒーローイメージ */
+figure.hero {
+	grid-column: 1 / -1;
+	grid-row: title / span 2;
+}
+
+figure.hero img {
+	height: 547px;
+	object-fit: cover;
+	vertical-align: bottom;
+	filter: brightness(70%);
+	z-index: -1;
+	position: relative; /* Edge用の設定 */
+}
+
+
+
+/* タイトル */
+h1 {
+	grid-row: title;
+	justify-self: center;
+	align-self: center;
+	color: #ffffff;
+	font-size: 50px;
+	font-weight: normal;
+	line-height: 1.2;
+	text-shadow: 0 0 5px #444444;
+	text-align: center;
+}
+
+/* サブタイトル */
+p {
+	grid-row: sub;
+	text-align: center;
+}
+
+p a {
+	color: #ffffff;
+	text-decoration: none;
+	border: solid 1px #ffffff;
+	padding: 10px 40px;
+	display: inline-block;
+	margin-top: 10px;
+	border-radius: 10px;
+	background-color: rgba(85, 93, 107, 0.5);
+}
+
+p a:hover {
+	background-color: #ef9504;
+}
+
+p img {
+	width: 250px;
+}
+
+
+/* 記事一覧 */
+section {
+	grid-row: recent;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px 10px;
+	gap: 20px 10px;
+}
+
+section a {
+	color: #000000;
+	text-decoration: none;
+}
+
+section a:hover {
+	text-decoration: underline;
+}
+
+section h2 {
+	font-size: 14px;
+}
+
+
+/* フッター */
+footer {
+	grid-row: foot;
+}
+
+
+

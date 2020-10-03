@@ -1,21 +1,31 @@
-@charset "UTF-8";
 @import url(normalize.css);
-body {
-  width: 100%;
-  height: 100%; }
-
-main {
-  width: 100%;
-  height: 100%; }
-
-.test {
-  display: table-cell;
-  /* IE8から使用可能 */
+html body main {
+  display: flex;
+  flex-direction: column;
   width: 100vw;
-  height: 100vh;
-  background-color: #22335b;
-  vertical-align: middle; }
-  .test p {
-    color: #fff;
-    text-align: center;
-    font-size: 10vw; }
+  height: 200vh; }
+  html body main .test {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+    background-color: #22335b; }
+    html body main .test p {
+      color: #fff;
+      text-align: center;
+      font-size: 10vw; }
+  html body main .flex {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    height: 50%;
+    background-color: #98db69; }
+    html body main .flex .num-wrap {
+      margin: 0 10px 10px 0;
+      padding: 15px;
+      background-color: #fff;
+      color: #000; }
