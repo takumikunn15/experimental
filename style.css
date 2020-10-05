@@ -14,10 +14,8 @@ img {
 body {
   display: grid;
   font-family: sans-serif;
-
   grid-template-columns: 20px 1fr 20px;
-  grid-template-rows:
-    [head] 100px [title] auto [sub] auto [recent] auto [foot] 100px;
+  grid-template-rows: [head] 100px [title] auto [sub] auto [recent] auto [foot] 100px;
   grid-row-gap: 20px;
   row-gap: 20px;
 }
@@ -28,37 +26,62 @@ body>* {
 
 header {
   align-self: center;
-  color: #555d6b;
+  color: #7c95bf;
   font-size: 40px;
-
   grid-row: head;
   justify-self: center;
 }
 
 nav {
   align-self: end;
-
   grid-row: head;
   justify-self: center;
 }
 
-ul {
+nav ul {
   display: grid;
   padding: 0;
   list-style-type: none;
   column-gap: 20px;
-
   grid-auto-flow: column;
   grid-column-gap: 20px;
 }
 
-figure {
+nav a {
+  color: #666;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+nav a:hover {
+  color: #ef9504;
+}
+
+figure.hero {
   grid-column: 1 / -1;
   grid-row: title / span 2;
 }
 
+figure.hero img {
+  position: relative;
+  z-index: -1;
+  height: 547px;
+  vertical-align: bottom;
+  filter: brightness(70%);
+  object-fit: cover;
+}
+
 h1 {
   grid-row: title;
+  color: #fff;
+  font-size: 50px;
+  font-weight: normal;
+  line-height: 1.2;
+  text-shadow: 0 0 5px #444;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
 }
 
 p {
