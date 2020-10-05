@@ -30,6 +30,7 @@ header {
   font-size: 40px;
   grid-row: head;
   justify-self: center;
+  font-family: 'Raleway', sans-serif;
 }
 
 nav {
@@ -82,16 +83,66 @@ h1 {
   justify-self: center;
   align-self: center;
   text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
 
 p {
   grid-row: sub;
+  text-align: center;
+}
+
+p img {
+  width: 250px;
+}
+
+p a {
+  text-decoration: none;
+  color: #fff;
+  background-color: rgb(85, 93, 107, 0.5);
+  border: solid 1px #fff;
+  border-radius: 10px;
+  padding: 10px 40px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+p a:hover {
+  background-color: #ef9504;
 }
 
 section {
   grid-row: recent;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px 10px;
+  gap: 20px 10px;
+}
+
+section a {
+  color: #000;
+  text-decoration: none;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+section h2 {
+  font-size: 14px;
 }
 
 footer {
   grid-row: foot;
+  justify-self: center;
+  align-self: center;
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;
+}
+
+body::after {
+  content: "";
+  background-color: #eee;
+  grid-column: 1 / -1;
+  grid-row: foot;
+  z-index: -1;
 }
