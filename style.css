@@ -34,18 +34,18 @@ header {
 }
 
 nav {
-  align-self: end;
   grid-row: head;
   justify-self: center;
+  align-self: end;
 }
 
 nav ul {
-  display: grid;
-  padding: 0;
   list-style-type: none;
-  column-gap: 20px;
+  padding: 0;
+  display: grid;
   grid-auto-flow: column;
   grid-column-gap: 20px;
+  column-gap: 20px;
 }
 
 nav a {
