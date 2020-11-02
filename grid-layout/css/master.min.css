@@ -1,1 +1,1 @@
-﻿body{margin:0;font-family:'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif}.post *{margin:0}.post img{width:100%;height:auto;vertical-align:bottom}
+﻿body{margin:0;font-family:'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif}.post *{margin:0}.post{display:grid;grid-template-columns:repeat(5, 1fr);grid-column-gap:40px}.post img{width:100%;height:auto;vertical-align:bottom}
